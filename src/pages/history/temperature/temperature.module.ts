@@ -10,4 +10,4 @@ import { TemperaturePage } from './temperature';
     IonicPageModule.forChild(TemperaturePage),
   ],
 })
-export class TemperaturePageModule {}
+export class TemperaturePageModule { }

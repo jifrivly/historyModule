@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 
 /**
  * Generated class for the TemperaturePage page.
@@ -15,7 +15,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TemperaturePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  graphPeriod: string = "day";
+  monitoredSpace = null;
+  isAndroid: boolean = false;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform) {
+    this.isAndroid = this.platform.is("android");
   }
 
   ionViewDidLoad() {
